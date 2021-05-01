@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization (Display/Visibility)</title>
+    
+    <style>
+        main{
+            margin: 40px auto;
+            width: 448px;
+        }
+        main section{
+            border: 1px solid #777;
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 200px;
+        }
+        main section h3{
+            text-align: center;
+            margin: 0px;
+            margin-bottom: 10px;
+            width: 0px;
+        }
+        main section div{
+            border: 1px solid #777;
+            display: inline-block;
+            font-size: 2em;
+            height: 42px;
+            margin-bottom: 8px;
+            padding: 10px;
+            text-align: center;
+            width: 42px;
+        }
+        main section div.Dnone {display: none;}
+        main section div.Vhidden{visibility: hidden;}
+        /*-------*/
+        main div{ 
+            border: 1px solid #777;
+            padding: 10px;
+        }
+        main div div.first{
+            margin-bottom: 20px;
+        }
+        main div div.Dinline{display: inline;}
+        main div a {
+                border: 1px solid;
+                padding: 10px;
+        }
+        main div a.Dblock{
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>5= Display: none</h3>
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+            <div class="box4">4</div>
+            <div class="box5 Dnone">5</div>
+            <div class="box6">6</div>
+            <div class="box7">7</div>
+            <div class="box8">8</div>
+            <div class="box9">9</div>
+        </section>
+        <section>
+            <h3>5= Visibility: hidden</h3>
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+            <div class="box4">4</div>
+            <div class="box5 Vhidden">5</div>
+            <div class="box6">6</div>
+            <div class="box7">7</div>
+            <div class="box8">8</div>
+            <div class="box9">9</div>
+        </section>
+
+        <div>
+            <div class="first">Normal div</div>
+            <div class="Dinline">Display: inline in div</div>
+            <a href="">Normal link</a>
+            <a href="" class="Dblock">Display: block in div</a>
+        </div>
+   </main>
+</body>
+</html>

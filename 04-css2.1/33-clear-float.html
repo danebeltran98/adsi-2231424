@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear float</title>
+
+    <style>
+        main{
+            margin: 40px auto;
+            width: 400px;
+        }
+        section.bigbox{
+            border: 2px solid #777;
+            padding: 0px 8px;
+        }
+        section.bigbox img{ 
+            float: left;
+        }
+        section.bigbox p{
+            border: 1px solid #777;
+        }
+        section.bigbox p.clear{
+            clear: left;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Float position in the image</h2>
+        <section class="bigbox">
+            <img src="imgs/bart-patten3.jpg" alt="">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quam dicta veritatis non inventore saepe a reprehenderit, numquam, possimus ipsum obcaecati. Esse fuga officiis ullam sequi deserunt error, numquam nobis.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi numquam officia pariatur ratione officiis asperiores ipsam, consequuntur sapiente hic neque porro adipisci unde aperiam corporis in incidunt! Veniam, natus totam.
+            </p>
+        </section>
+        <h2>Paragraph 2 with cleaar</h2>
+        <section class="bigbox">
+            <img src="imgs/bart-patten3.jpg" alt="">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatum necessitatibus, ex ut asperiores iusto facilis repellat commodi quam cupiditate minima accusamus aut dolorem provident. Nisi dignissimos officia quasi deserunt!
+            </p>
+            <p class="clear">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In quas maiores maxime fugiat tempora laudantium quis quae nostrum, autem nihil molestias a mollitia voluptatum sit quam quasi consectetur, ab minus?
+            </p>
+        </section>
+    </main>
+</body>
+</html>
