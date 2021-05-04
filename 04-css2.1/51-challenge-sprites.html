@@ -9,11 +9,11 @@
         <style>
         body {
             background-color: #16a054;
-            border: 8px solid #ffffff;            
+            border: 2px solid #fff;            
             margin: 0;
             }
         main {
-            margin: 200px auto;
+            margin: 190px auto;
             width: 1029px;
             margin-top: 0;
         }
@@ -39,7 +39,7 @@
             color: #fff;            
             text-decoration: none;
             display: block;
-            border-bottom: 5px solid white;
+            border-bottom: 5px solid #fff;
             padding: 20px 0px;
             width: 184px;
             text-align: center;
@@ -48,7 +48,7 @@
         a.M1 {margin-left: 23px;}
         menu ul li a:hover {
             background-color: #082c18;
-            border-bottom: 5px solid #cec009;
+            border-bottom: 8px solid #cec009;
         }
         main section {
             background-color: #106335;
@@ -57,7 +57,7 @@
             width: 1029px;
             padding: 0;
         }
-        main section div.BOTELLAS1 {
+        main section div.sprite1 {
             background: url(imgs/sprite.png), no-repeat;
             height: 202px;
             width: 315px;
@@ -67,9 +67,9 @@
             border: 2px solid #fff;
             padding: 0;
         }
-        main section div.BOTELLAS1 {background-position: -471px -6px;}
+        main section div.sprite1 {background-position: -471px -6px;}
 
-        section.caja div.BOTELLAS1 p {
+        section.caja div.sprite1 p {
             background-color: #ffffff6e;
             text-align: center;
             height: 71px; 
@@ -79,45 +79,45 @@
             font-weight: bolder;            
         }
 
-        section div.ilum1:hover p {background-color: #ffffffb3;}
-        section div.ilum2:hover p {background-color: #ffffffb3;} 
-        section div.ilum3:hover p {background-color: #ffffffb3;}         
+        section div.sp1:hover p {background-color: #fff;}
+        section div.sp2:hover p {background-color: #fff;} 
+        section div.sp3:hover p {background-color: #fff;}         
 
-        section.caja1 {
+        section.c1 {
             padding: 0;            
             height: 771px;
         }
-        section.caja1 div.Primero.mb{margin-bottom: 2px;}
+        section.c1 div.Primero.mb{margin-bottom: 2px;}
 
-        section.caja1 div.Primero {
+        section.c1 div.Primero {
             background-color: #fff;
             margin: 10px 10px;
             margin-bottom: 8px;           
             display: inline-block; 
             padding-bottom: 25px;     
         }
-        section.caja1 div.Primero a.text {
+        section.c1 div.Primero a.text {
             display: inline-block;
             width: 670px;
             height: 100px;
             text-decoration: none;
-            color: black;
+            color: #000000;
             word-spacing: 8px;
             text-align: justify;
             font-size: medium;
             line-height: 35px;
             padding-top: 15px;                    
         }
-        section.caja1 div.Primero div.logo2 {
+        section.c1 div.Primero div.logo2 {
             background: url(imgs/sprite.png), no-repeat;
             height: 82px;
             width: 83px;
             margin: 55px 40px;
             display: inline-block;            
         }
-        section.caja1 div.Primero div.logo2 {background-position: -300px -500px;}
+        section.c1 div.Primero div.logo2 {background-position: -300px -500px;}
         
-        section.caja1 div.Primero div.lata {
+        section.c1 div.Primero div.lata {
             background: url(imgs/sprite.png), no-repeat;
             height: 167px;
             width: 101px;
@@ -125,18 +125,17 @@
             display: inline-block;
             margin-right: 47px;
         }
-        section.caja1 div.Primero div.lata {background-position: -90px -200px;}
+        section.c1 div.Primero div.lata {background-position: -90px -200px;}
 
-        section.caja1 div.Primero:hover a.hov1{color: #16a054;}
-        section.caja1 div.Primero:hover a.hov2{color: #16a054;}
-        section.caja1 div.Primero:hover a.hov3{color: #16a054;}
+        section.c1 div.Primero:hover a.hov1{color: #16a054;}
+        section.c1 div.Primero:hover a.hov2{color: #16a054;}
+        section.c1 div.Primero:hover a.hov3{color: #16a054;}
 
-        /* Sección del Footer con NavBar */
-        section.cajafooter {
+        section.cajassprites {
             background-color: #fff;
             height: 255px;
         }
-        section.cajafooter menu.segundo {            
+        section.cajassprites menu.segundo {            
             margin: 0px;
             padding: 0px;
         }
@@ -147,11 +146,11 @@
         }
         menu.segundo ul li {display: inline-block;}
         menu.segundo ul li a {
-            background-color: #ffffff;
-            color: black;            
+            background-color: #fff;
+            color: #000000;            
             text-decoration: none;
             display: block;
-            border-bottom: 5px solid #ffffff;
+            border-bottom: 5px solid #fff;
             padding: 20px 0px;
             width: 160px;
             text-align: center;
@@ -160,14 +159,14 @@
         menu.segundo ul li a.M12.move {margin-left: 100px;}
         a.M12 {margin-left: 0px;}
         menu.segundo ul li a:hover {border-bottom: 5px solid #082c18;}
-        main section.cajafooter div.todaslasbotellas{
+        main section.cajassprites div.Spritesbotellas{
             background: url(imgs/sprite.png), no-repeat;
             height: 181px;
-            width: 319px;
+            width: 325px;
             display: block;
-            margin-left: 344px;
+            margin-left: 346px;
         }
-        main section.cajafooter div.todaslasbotellas{background-position: -456px -425px;}
+        main section.cajassprites div.Spritesbotellas{background-position: -456px -407px;}
     </style>
 
 </head>
@@ -184,31 +183,22 @@
                 </ul>
             </menu>
             <section class="caja">
-                <div class="BOTELLAS1 ilum1">
+                <div class="sprite1 sp1">
                     <p>Sprite 01</p>
                 </div>
-                <div class="BOTELLAS1 ilum2">
+                <div class="sprite1 sp2">
                     <p>Sprite 02</p>
                 </div>
-                <div class="BOTELLAS1 ilum3">
+                <div class="sprite1 sp3">
                     <p>Sprite 03</p>
                 </div>
             </section>
-            <section class="caja1">
+            <section class="c1">
                 <div class="Primero mb">
 
                     <div class="logo2"></div>
 
-                    <a href="#" class="text hov1">Lorem, ipsum dolor sit amet
-                        consectetur adipisicing elit. Cum ducimus, voluptate,
-                        commodi debitis laboriosam accusantium libero atque
-                        accusamus explicabo dicta soluta impedit, placeat sunt.
-                        Placeat consectetur ratione molestiae quos debitis
-                        similique porro officiis non quae totam, veritatis ea
-                        in! Deserunt, obcaecati? Quidem sunt, quod eos nihil
-                        deserunt, quibusdam distinctio quasi voluptatem saepe,
-                        sed commodi. Placeat nesciunt pariatur impedit
-                        reiciendis ducimus!
+                    <a href="#" class="text hov1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem rerum assumenda esse. Voluptate soluta maxime ipsa autem accusantium enim quis, libero sapiente reiciendis dicta tempore inventore aliquid eius accusamus deserunt quia odio illo quo consequatur hic est nobis distinctio? Quaerat, autem, earum fugiat molestiae soluta ipsum mollitia ea in aliquam dolorum consequuntur et voluptatem nulla eos nihil fugit assumenda quos reiciendis sapiente. Animi voluptatum consequuntur hic, ullam voluptate amet accusamus minima maiores officia ut enim iste temporibus aliquam velit sed?
                     </a>
 
                     <div class="lata"></div>
@@ -218,16 +208,7 @@
 
                     <div class="logo2"></div>
 
-                    <a href="#" class="text hov2">Lorem, ipsum dolor sit amet
-                        consectetur adipisicing elit. Cum ducimus, voluptate,
-                        commodi debitis laboriosam accusantium libero atque
-                        accusamus explicabo dicta soluta impedit, placeat sunt.
-                        Placeat consectetur ratione molestiae quos debitis
-                        similique porro officiis non quae totam, veritatis ea
-                        in! Deserunt, obcaecati? Quidem sunt, quod eos nihil
-                        deserunt, quibusdam distinctio quasi voluptatem saepe,
-                        sed commodi. Placeat nesciunt pariatur impedit
-                        reiciendis ducimus!
+                    <a href="#" class="text hov2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, assumenda doloremque alias excepturi, aliquam non eos quibusdam ipsam culpa officia id minima aut iusto laboriosam! Accusamus, vero eos. Corporis provident fugiat, dignissimos illum dolor eaque eligendi. Delectus architecto necessitatibus laudantium obcaecati vitae non magni at atque accusamus earum animi soluta id similique odio velit veritatis ex, fugiat exercitationem dolorum ipsam accusantium quia? Nesciunt molestias, explicabo quam blanditiis reprehenderit, porro quis illo mollitia, quisquam nisi velit dignissimos totam ullam consectetur aliquam?
                     </a>
 
                     <div class="lata"></div>
@@ -236,16 +217,7 @@
 
                     <div class="logo2"></div>
 
-                    <a href="#" class="text hov3">Lorem, ipsum dolor sit amet
-                        consectetur adipisicing elit. Cum ducimus, voluptate,
-                        commodi debitis laboriosam accusantium libero atque
-                        accusamus explicabo dicta soluta impedit, placeat sunt.
-                        Placeat consectetur ratione molestiae quos debitis
-                        similique porro officiis non quae totam, veritatis ea
-                        in! Deserunt, obcaecati? Quidem sunt, quod eos nihil
-                        deserunt, quibusdam distinctio quasi voluptatem saepe,
-                        sed commodi. Placeat nesciunt pariatur impedit
-                        reiciendis ducimus!
+                    <a href="#" class="text hov3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi veritatis harum eum, dolores eveniet doloremque reprehenderit sed reiciendis laudantium modi ducimus est totam, hic non quidem officia aliquid? Fugiat, mollitia!
                     </a>
 
                     <div class="lata"></div>
@@ -253,8 +225,8 @@
                 </div>
             </section>
 
-            <section class="cajafooter">
-                <div class="todaslasbotellas"></div>
+            <section class="cajassprites">
+                <div class="Spritesbotellas"></div>
                 <menu class="segundo">
                     <ul>
                         <li><a href="#" class="Ml2 move">INICIO</a></li>
