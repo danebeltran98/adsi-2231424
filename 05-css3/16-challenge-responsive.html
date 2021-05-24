@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge responsive</title>
+
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+        }
+
+            main {
+                background-color: blue;
+                border: 4px solid #ffc400;
+                margin: -8px auto;
+                }
+
+            /* titulo - topic */
+            
+            section.esc1 figure.Topic {
+                background: url(imgs/Drtitulo.png) no-repeat center;
+                background-size: contain;
+                height: 350px;                
+                margin: 0px auto;
+                width: 400px;
+            }           
+
+            /* 4 imágenes con sus paginas */
+            section.esc2 {margin: 30px 265px;}
+
+            section.esc2 a.films p.text {
+                background-color:#000000cc;                
+                color: white;
+                font-size: 130%;
+                height: 65px;
+                line-height: 60px;
+                margin-top: 190px;
+                text-align: center;
+                transition: all 0.15s ease-in;                
+            }
+            section.esc2 a.films:hover p.text {
+                transform: translateY(-28px);
+                height: 93px;                
+            }
+            section.esc2 a.films {
+                display: inline-block;
+                text-decoration: none;
+            }
+            section.esc2 a.MV {margin: 40px 20px 40px 20px;}
+
+            section.esc2 a.photo1 {
+                background: url(imgs/son-goku-png.jpg) no-repeat;
+                background-size: cover;
+                height: 250px;
+                width: 250px;                          
+            }
+            section.esc2 a.photo2 {
+                background: url(imgs/vegeta.png) no-repeat;
+                background-size: cover;
+                height: 250px;
+                width: 250px;                
+            }
+            section.esc2 a.photo3 {
+                background: url(imgs/Goku2.png) no-repeat;
+                background-size: cover;
+                height: 250px;
+                width: 250px;                
+            }
+            section.esc2 a.photo4 {
+                background: url(imgs/vegeta2.png) no-repeat;
+                background-size: cover;
+                height: 250px;
+                width: 250px;                
+            }
+            
+            /* 2 Imágenes con lorem */
+            section.esc3 {margin: 0px 265px;}
+            
+            section.esc3 div.imagen2 {margin: 0px 15px 60px 15px;}
+
+            section.esc3 div.second-imagen {
+                background: url(imgs/freezer.png);
+                background-size: cover;
+                height: 210px;
+                width: 325px;
+            }
+            section.esc3 div.third-imagen {
+                background: url(imgs/majinbuu.png);
+                background-size: cover;
+                height: 186px;
+                width: 300px;
+            }
+            section.esc3 div.second-imagen,
+            section.esc3 div.third-imagen,
+            section.esc3 div.imagen2 {
+                display: inline-block;
+                vertical-align: top;                
+            }
+            section.esc3 div.imagen2 h3 {
+                font-size: 200%;
+                margin: 10px;
+                }
+            section.esc3 div.imagen2 p{
+                line-height: 25px;
+                text-align: justify;
+                width: 658px;
+            }
+
+            @media (max-width: 1700px) {                
+                section.esc2,
+                section.esc3{
+                    margin-left: 140px;
+                    margin-right: 80px;
+                }
+            }
+            @media (max-width: 1400px) {                
+                section.esc2,
+                section.esc3{
+                    margin-left: 80px;
+                    margin-right: 80px;
+                }
+            }
+            @media (max-width: 1024px) {                
+                section.esc1 figure.Topic{
+                background: url(imgs/Dbtitulo2.png) no-repeat center; 
+                height: 220px;
+                width: 270px;
+                }                
+            }
+
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Titulo-->
+        <section class="esc1">
+            <figure class="Topic"></figure>
+        </section>
+
+        <!--4 imagenes con pagina web--->
+        <section class="esc2">
+            <a href="#" class="photo1 films MV" target="_blank">
+                <p class="text">Gokú (1-season)</p>
+            </a>
+            <a href="#" class="photo2 films MV" target="_blank">
+                <p class="text">Vegeta (2-season)</p>
+            </a>
+            <a href="#" class="photo3 films MV" target="_blank">
+                <p class="text">Gokú saiyajin (3-season)</p>
+            </a>
+            <a href="#" class="photo4 films MV" target="_blank">
+                <p class="text">Vegeta saiyajin (4-season)</p>
+            </a>
+        </section>
+
+
+        <!-- dos imagenes con lorem -->
+        <section class="esc3">
+            <div class="second-imagen"></div>
+        <div class="imagen2">
+            <h3>Freezer</h3>
+            <p>,Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dicta eligendi? Cupiditate voluptates, quae dolor perspiciatis provident veniam vero quos saepe blanditiis optio enim, voluptas laborum inventore molestias quo aspernatur ipsa libero voluptatem quibusdam repudiandae minus neque. Ipsam iusto, dolore numquam nostrum perferendis ducimus. Sunt dicta quidem dolores nihil quibusdam non omnis officia modi, tempora quam natus adipisci porro, saepe nulla magnam veritatis enim provident. Eveniet voluptatum sequi minus est eum quis omnis commodi assumenda ratione error! Nihil eveniet eligendi, error omnis voluptate esse quod fugit nulla fugiat repudiandae dolore voluptatum. Recusandae dicta modi expedita vitae minus eos, laboriosam earum dolorum voluptatibus voluptate molestias alias veniam, odio vero ex. Perspiciatis deserunt officiis facere totam eius voluptatibus unde, quos nam, rerum possimus quas? Ex ad optio dolores repellendus magnam quo enim ullam reiciendis soluta aspernatur tempore, laudantium incidunt. Porro, adipisci qui minima at perferendis quas dolorum sit ratione, delectus amet voluptatum voluptates! Nemo eaque temporibus nesciunt unde consequuntur numquam corporis dolor distinctio similique doloribus, aliquid blanditiis. Ea sunt aliquam totam, expedita hic quod non. Incidunt, et? Hic cum, ab fugiat itaque incidunt ipsam libero at adipisci, suscipit illo excepturi, minima quis laudantium recusandae dolore delectus ex asperiores soluta rem in doloremque.</p>
+        </div>
+
+        <div class="third-imagen"></div>
+        <div class="imagen2">
+            <h3>Majin buu</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus velit corporis quos laudantium sequi libero suscipit eos iure pariatur, praesentium, itaque quod ad ipsam rerum tempore officiis molestiae placeat voluptates officia, illum fuga esse? Rem culpa, natus obcaecati illum enim fuga! Harum totam dolore omnis doloribus nihil neque labore iusto modi error vero necessitatibus suscipit, dolor autem consequuntur cupiditate sapiente animi? Repudiandae iusto officiis dolorem quisquam provident. Harum cumque enim eos quibusdam fugit praesentium, blanditiis nesciunt veniam quasi illo ratione, quam animi vitae asperiores sit sed quisquam. Nihil voluptas harum dolorum a, praesentium quod veniam necessitatibus dolore quae minus voluptatibus saepe commodi exercitationem dicta possimus libero vero quidem doloribus minima odio aliquam reprehenderit! Illo quibusdam provident accusamus facilis velit aspernatur, eos voluptates alias? Vel, pariatur assumenda itaque quo reprehenderit numquam ullam veniam doloribus suscipit quia asperiores cum impedit accusamus cumque nihil eum voluptates exercitationem unde facere repellat ipsum eveniet! Rem id deleniti illo voluptate facilis? Autem ullam eveniet excepturi placeat, asperiores possimus assumenda magni odio iusto atque unde cumque voluptatibus quis ducimus eaque. Ipsa, fuga dolorem perspiciatis inventore architecto ab.</p>
+        </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -27,5 +27,9 @@
         color: #fff;
         text-decoration: none;
         float: left;
-
+    }
+    @media (max-width: 580px) {
+        main {
+            width: 345px;
+        }
     }
