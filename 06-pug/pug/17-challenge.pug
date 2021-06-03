@@ -1,0 +1,10 @@
+doctype 
+html 
+    head 
+        title Desafio pug Daniel Beltrán 
+    body 
+        h1 Desafio de los colores   
+        each Colours  in ['#EBEDEF', '#D6DBDF', '#AEB6BF', '#85929E', '#5D6D7E', '#34495E', '#2E4053', '#283747', '#212F3C', '#1B2631']
+            div(style={'background-color': Colours , padding: '30px'})
+            div(style={'background-color': '#F4D03F', padding: '1px'})
+            body(style={'background-color':'#7B7D7D'})
