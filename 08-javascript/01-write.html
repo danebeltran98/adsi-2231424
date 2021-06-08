@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>write js</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <header>
+           <h1> <span><a href="index.html">&larr;</a></span> write JS</h1>
+        </header>
+            <section>
+                <h2 id="msj">Default message</h2>
+             </section>
+    </main>
+    <script>
+        var msj = document.getElementById('msj');
+        msj.innerHTML = "new message";
+        //----------------------------------------
+        document.writeln("<main><section><h2>Document message</h2></section></main>");
+        //------------------------------------------
+        console.clear();
+        console.log("console message");
+        //-----------------------------------------
+        alert("Alert message");
+    </script>
+</body>
+</html>
