@@ -37,10 +37,16 @@
         tags.innerText = "there are: "+ ntags.length +" paragraphs";
         
         // Get elements By classname
-
+        let elements   = document.getElementsByClassName('element');
+        elements[2].style.backgroundColor = '#f0dc68';
+        elements[2].style.fontWeight = '800';
+        elements[2].style.width = '200px';
 
         //  Query selector
-
+        let btn  = document.querySelector('section button.btn');
+        let btns = document.querySelectorAll('section button.btn');
+        btn.style.color     = "#900";
+        btns[1].style.color = "#090";
 
     </script>
 </body>
