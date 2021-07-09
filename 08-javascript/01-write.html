@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>write js</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Write JS</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <main>
         <header>
-           <h1> <span><a href="index.html">&larr;</a></span> write JS</h1>
+            <h1> <span><a href="index.html">&larr;</a></span> Write JS</h1>
         </header>
-            <section>
-                <h2 id="msj">Default message</h2>
-             </section>
+        <section>
+            <h2 id="msj">Default Message</h2>
+        </section>
     </main>
+
     <script>
         var msj = document.getElementById('msj');
-        msj.innerHTML = "new message";
-        //----------------------------------------
-        document.writeln("<main><section><h2>Document message</h2></section></main>");
-        //------------------------------------------
+        msj.innerText = "New Message";
+        // - - - - - - - - - - - - - - - - - - - - - 
+        document.write("<main><section><h2>Document Message</h2></section></main>");
+        // - - - - - - - - - - - - - - - - - - - - - 
         console.clear();
-        console.log("console message");
-        //-----------------------------------------
-        alert("Alert message");
+        console.log("Console Message");
+        // - - - - - - - - - - - - - - - - - - - - - 
+        alert("Alert Message");
     </script>
+    
 </body>
 </html>

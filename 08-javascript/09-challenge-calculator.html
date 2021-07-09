@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        div.calculator {
+            background: url(imgs-claro/consolemode.png) no-repeat center;
+            height: 736px;
+            margin: 0px auto 40px auto;
+            position: relative;
+            transition: all 0.5s ease-out;
+            width: 414px;
+        }
+                /*nav.mode*/
+        div.calculator nav.mode {
+            left: 148px;
+            position: absolute;
+            top: 22px;
+            width: 120px;
+        }
+        div.calculator nav.mode a {
+            display: inline-block;
+            height: 40px;
+            transition: transform 0.2s ease-in;
+            width: 60px;
+        }
+        div.calculator nav.mode a#dark:hover{
+            transform: scale(1.04) translateY(2px);
+        }
+        div.calculator nav.mode a#light:hover{
+            transform: scale(1.04) translateY(2px);
+        }
+        div.calculator nav.mode a:last-child{
+            margin-left: -5px;
+        }
+        div.calculator nav.mode a#light{
+            background: url(imgs-claro/lightmod.png) no-repeat center;
+        }
+        div.calculator nav.mode a#dark{
+            background: url(imgs-claro/darkmod.png) no-repeat center;
+        }
+                    /*div.display*/
+        div.calculator div.display{
+            font-family: Roboto;
+            position: absolute;
+            top: 130px;
+            text-align: right;
+            right: 20px;
+            width: 300px;
+        }
+        div.calculator div.display p#operation{
+            color: #000;
+            font-weight: 300;
+            font-size: 18px;
+            margin: 0px;
+        }
+        div.calculator div.display h4#aswer{
+            color: #7c7878;
+            font-weight: 400;
+            font-size: 64px;
+            opacity: 0.8;
+            margin: 0px;
+        }
+        div.calculator div.display div#resultado{
+            background: url(imgs-claro/=.png) no-repeat center;
+            height: 130px;
+            width: 21px;
+            margin-top: -25px;
+            margin-left: -10px;
+        }
+                     /*nav.buttons*/
+        div.calculator nav.buttons{
+            left: 20px;
+            position: absolute;
+            top: 250px;
+            width: 377px;
+        }
+        div.calculator nav.buttons ul::selection{
+            background-color: transparent;
+        }
+        div.calculator nav.buttons ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        div.calculator nav.buttons ul li{
+            background-color: gray;
+            display: inline-block;
+            height: 86px;
+            margin: 0px 6px 5px 0px;
+            opacity: 0.8;
+            transition: transform 0.2s ease-in;
+            width: 86px;            
+        }
+        div.calculator nav.buttons ul li:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        div.calculator nav.buttons ul li:nth-child(4n){
+            margin-right: 0px;
+        }
+        div.calculator nav.buttons ul li#bt-clear{
+            background: url(imgs-claro/btnC.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-borrar {
+            background: url(imgs-claro/btnborar.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-pow {
+            background: url(imgs-claro/btn_.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-div {
+            background: url(imgs-claro/btn-div.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-7 {
+            background: url(imgs-claro/btn7.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-8{
+            background: url(imgs-claro/btn8.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-9{
+            background: url(imgs-claro/btn9.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-multiplication{
+            background: url(imgs-claro/multiplicacion.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-4{
+            background: url(imgs-claro/btn4.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-5{
+            background: url(imgs-claro/btn5.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-6{
+            background: url(imgs-claro/btn6.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-restar{
+            background: url(imgs-claro/btn-rest.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-1{
+            background: url(imgs-claro/btn1.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-2{
+            background: url(imgs-claro/btn2.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-3{
+            background: url(imgs-claro/btn3.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-sumar{
+            background: url(imgs-claro/btn+.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-0{
+            background: url(imgs-claro/btn0.png) no-repeat center;
+        }
+       
+        div.calculator nav.buttons ul li#bt-punto{
+            background: url(imgs-claro/btn-punto.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-per{
+            background: url(imgs-claro/btn.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-result{
+            background: url(imgs-claro/btn=.png) no-repeat center;
+        }
+        /*mode (light/dark)*/
+        div.calculator.dark {
+            background: url(imgs-oscuro/dark-mode.png) no-repeat center;
+        }
+        div.calculator.dark nav.mode a#light{
+            background: url(imgs-claro/lightmod.png) no-repeat center;
+        }
+        div.calculator.dark nav.mode a#dark{
+            background: url(imgs-claro/darkmod.png) no-repeat center;
+        }
+        div.calculator.dark div.display p#operation{
+            color: #d5eddf;
+        }
+        div.calculator.dark div.display h4#answer{
+            color: #fff;
+            opacity: 0.6;
+        }
+        div.calculator.dark div.display div#resultado{
+            color: #fff;
+            height: 130px;
+            width: 21px;
+            margin-top: -25px;
+            margin-left: -10px;
+        }
+        div.calculator.dark nav.buttons ul li#bt-clear{
+            background: url(imgs-oscuro/btnC.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-borrar{
+            background: url(imgs-oscuro/bt-borrar.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-pow{
+            background: url(imgs-oscuro/btn_.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li.div{
+            background: url(imgs-oscuro/bt-div.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-7{
+            background: url(imgs-oscuro/btn7.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-8{
+            background: url(imgs-oscuro/btn8.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-9{
+            background: url(imgs-oscuro/btn9.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-multiplication{
+            background: url(imgs-oscuro/multiplicacion.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-4{
+            background: url(imgs-oscuro/btn4.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-5{
+            background: url(imgs-oscuro/btn5.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-6{
+            background: url(imgs-oscuro/btn6.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-restar{
+            background: url(imgs-oscuro/bt-rest.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-1{
+            background: url(imgs-oscuro/btn1.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-2{
+            background: url(imgs-oscuro/btn2.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-3{
+            background: url(imgs-oscuro/btn3.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-sumar{
+            background: url(imgs-oscuro/btn+.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-0{
+            background: url(imgs-oscuro/btn0.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-punto{
+            background: url(imgs-oscuro/bt-punto.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-per{
+            background: url(imgs-oscuro/btn.png) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-result{
+            background: url(imgs-oscuro/btn=.png) no-repeat center;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1> <span><a href="index.html">&larr;</a></span>Challenge calculator</h1>
+            <section>
+                <div class="calculator">
+                    <nav class="mode">
+                        <a href="javascript:;" id="light"></a>
+                        <a href="javascript:;" id="dark"></a>
+                    </nav>
+                        <div class="display">
+                            <p id="operation"></p>
+                            <h4 id="answer"></h4>
+                            <div id="resultado"></div>
+                        </div>
+                    <nav class="buttons">
+                        <ul>
+                            <li id="bt-clear"></li>
+                            <li id="bt-borrar"></li>
+                            <li id="bt-pow"></li>
+                            <li id="bt-div"></li>
+                            <li id="bt-7"></li>
+                            <li id="bt-8"></li>
+                            <li id="bt-9"></li>
+                            <li id="bt-multiplication"></li>
+                            <li id="bt-4"></li>
+                            <li id="bt-5"></li>
+                            <li id="bt-6"></li>
+                            <li id="bt-restar"></li>
+                            <li id="bt-1"></li>
+                            <li id="bt-2"></li>
+                            <li id="bt-3"></li>
+                            <li id="bt-sumar"></li>
+                            <li id="bt-0"></li>
+                            <li id="bt-punto"></li>
+                            <li id="bt-per"></li>
+                            <li id="bt-result"></li>     
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+    </main>
+
+                <script>
+                   /*variables y constants*/ 
+                   var nchars = 0;
+                   var operation = document.getElementById('operation');
+                   var answer = document.getElementById('answer');
+                    var a;
+                    var numlarg ='';
+                    var b;
+                    var solución;
+                    var operación ='';
+                    var numoperación = 0;
+
+                   const skin = document.querySelector('div.calculator');
+                   const light = document.getElementById('light');
+                   const dark = document.getElementById('dark');
+                   
+                   const btnclrear = document.getElementById('bt-clear');
+                   const btnborrar = document.getElementById('bt-borrar');
+                   const btnpow = document.getElementById('bt-pow');
+                   const btndiv = document.getElementById('bt-div');
+
+                   const btn7 = document.getElementById('bt-7');
+                   const btn8 = document.getElementById('bt-8');
+                   const btn9 = document.getElementById('bt-9');
+                   const btnX = document.getElementById('bt-multiplication');
+
+                   const btn4 = document.getElementById('bt-4');
+                   const btn5 = document.getElementById('bt-5');
+                   const btn6 = document.getElementById('bt-6');
+                   const btnrest = document.getElementById('bt-restar');
+
+                   const btn1 = document.getElementById('bt-1');
+                   const btn2 = document.getElementById('bt-2');
+                   const btn3 = document.getElementById('bt-3');
+                   const btnsumar = document.getElementById('bt-sumar');
+                   const btn0 = document.getElementById('bt-0');
+                   const btnpunto = document.getElementById('bt-punto');
+                   const btnper = document.getElementById('bt-per');
+                   const btnresult = document.getElementById('bt-result');
+
+                   /*funciones or fuctions*/
+                   function validatelength()
+                   {
+                       if (nchars <= 28)
+                       {
+                           nchars++;
+                           return true;
+                       }
+                       else
+                       {
+                           return false;
+                       }
+                   }
+                   function sumarnum(N)
+                   {
+                       if (validatelength())
+                       {
+                           operation.innerText += N;
+                           numlarg += N;
+                       }
+                   }
+                   function sumaroperación(res)
+                   {
+                       if (validatelength())
+                       {
+                           if (numoperación == 0);
+                          { 
+                              a = numlarg;
+                              solución = a;
+                          }
+                          operation.innerText += rest;
+                          numoperación++;
+                          operación = rest;
+
+                          if (operación == "%")
+                          {
+                            b = numlarg;
+                          }
+                          numlarg = '';
+                       }
+                   }
+                   function clearCharacter()
+                   {
+                       operation.innerText = '';
+                       answer.innerText = '';
+                       nchars = 0;
+                       numlarg = '';
+                       operación = '';
+                       numoperación = 0;
+                   }
+                   function borrarCharacter()
+                   {
+                       operation.innerText = operation.textContent.toString().slice(0,-3);
+                       numlarg = parseInt(numlarg / 10);
+                       nchars--;
+                   }
+                   function resolver()
+                {
+                    a = solución;
+                    if(operación == "%")
+                    {
+                        //console.log("Está bien");
+                    } 
+                    else if(numlarg == '')
+                    {
+                        b = 0;
+                    }
+                    else 
+                    {
+                        b = numlarg;
+                    }
+                    
+                    numlarg = '';
+                    switch(operación){
+                        case "+":
+                            solución =  parseFloat(a) + parseFloat(b);                    
+                                                                        break;
+                        case "-":
+                            solución =  parseFloat(a) - parseFloat(b);                    
+                                                                        break;
+                        case "*":
+                            solución =  parseFloat(a) * parseFloat(b);                    
+                                                                        break;
+                        case "/":
+                            solución =  parseFloat(a) / parseFloat(b);
+                                                                        break;
+                        case "^":
+                            solución = Math.pow(a, b)
+                                                                        break;
+                        case "%":
+                            solución = parseFloat(a) * parseFloat(b) / 100; 
+                                                                        break;
+                    }
+                   
+                    answer.innerText = solución;
+                    if (answer.textContent.length > 9)
+                    {
+                        answer.innerText = answer.textContent.slice(0,9);
+                    }
+                }
+
+        function desarrollar()
+        {
+            answer.innerText= eval(operation.textContent);
+            if (answer.textContent.length > 9)
+            {
+                answer.innerText = answer.textContent.slice(0,9);
+            }
+        }
+
+        //Events
+        light.onclick = function()
+        {
+            skin.classList.remove('dark')
+            //this.classList.add('active');
+            //dark.classList.remove('active');
+        }
+
+        dark.onclick = function()
+        {
+            skin.classList.add('dark')        
+        }
+
+        btnclear.onclick=function(){
+            clearCharacters();
+        }
+        btnborrar.onclick = function(){
+            delCharacter();
+        }
+        btnPow.onclick = function() {
+            addoperación('^');
+        }
+        btndiv.onclick = function(){
+            addoperación('/');
+        }
+
+        btn7.onclick = function(){
+            addNumber(7);
+        }
+        btn8.onclick = function(){
+            addNumber(8);
+        }
+        btn9.onclick = function(){
+            addNumber(9);
+        }
+        btnX.onclick = function(){
+            addoperación('*');
+        }
+
+        btn4.onclick = function(){
+            addNumber(4);
+        }
+        btn5.onclick = function(){
+            addNumber(5);
+        }
+        btn6.onclick = function(){
+            addNumber(6);
+        }
+        btnrest.onclick = function(){
+            addoperación("-");
+        }
+
+        btn1.onclick = function(){
+            addNumber(1);
+        }
+        btn2.onclick = function(){
+            addNumber(2);
+        }
+        btn3.onclick = function(){
+            addNumber(3);
+        }
+        btnsumar.onclick = function(){
+            addoperación("+");
+        }
+
+        btnPer.onclick = function(){
+            addoperación("%");
+        }
+        btn0.onclick = function(){
+            addNumber(0);
+        }
+        btnpunto.onclick = function(){
+            addNumber(".");
+        }
+        btnresult.onclick = function(){
+            if(operación =="%" || operación =="^"){
+                desarrollar();
+            }else {
+                desarrollar();
+            }
+        }
+
+
+                </script>
+</body>
+</html>
